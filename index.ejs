@@ -1,0 +1,35 @@
+<%- include('layout/header') %>
+  
+
+<div class="index-area">
+  <% if(images != ''){ %>
+    <h3>All images </h3>
+     <% images.forEach((row, index)=>{ %>
+      <div class="image">
+        <img src="<%= row.image %>" alt="imgupload" class="image-size"/>
+        <div >
+        <span class="designer"><%= row.designer %></span>|
+        <span class="price"> $ <%= row.price %></span>| 
+        <span class="description"><%= row.description %></span>
+      </div>
+      <div>
+        <button id="btn-id">Buy</button>
+        <a href="/edit/<%= row._id%>" class="text-success"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="/delete/<%= row._id%>" class="text-danger"><i class="fa-solid fa-trash"></i></i></i></a>
+      </div>
+     </div>
+     <% })%>
+   
+ 
+  <% } else { %>
+    <h1 class="text-center text-secondary mt-5">No image found in database</h1>
+  <% }  %>
+ 
+   
+
+</div>
+
+
+
+
+<%- include('layout/footer') %>

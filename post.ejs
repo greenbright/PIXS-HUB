@@ -1,0 +1,28 @@
+<%- include('layout/header') %>
+
+    <form action="/post" method="POST" enctype="multipart/form-data">
+    <div class="mack-area">
+        <div class="mack-header">
+        <h4 id="form-header">Hey,welcome  please post a cool pics!</h4>
+       </div>  
+    <div class="mack">
+        <input type="number" class="form-control" name ="price" placeholder="Price">
+      </div>
+      <div class="mack">
+        <input type="text" class="form-control" name ="designer" placeholder="Designer">
+      </div>
+      <div class="mack">
+        <input type="text" class="form-control" name ="description" placeholder="Description">
+      </div>
+      <div class="mack">
+        <input type="file" class="form-control" name ="image" placeholder="Choose a file">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+
+
+
+<%- include('layout/footer') %>
+

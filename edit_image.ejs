@@ -1,0 +1,33 @@
+<%- include('layout/header') %>
+
+    <form action="/update/<%= image._id %>" method="POST" enctype="multipart/form-data">
+    <div class="mack-area">
+        <div class="mack-header">
+        <h4 id="form-header">Edit(<%= image.designer %>)</h4>
+       </div>  
+    <div class="mack">
+        <input type="number" class="form-control" name ="price" placeholder="Price" 
+        value="<%= image.price %>" required >
+      </div>
+      <div class="mack">
+        <input type="text" class="form-control" name ="designer" placeholder="Designer"
+        value="<%= image.designer %>" required >
+      </div>
+      <div class="mack">
+        <input type="text" class="form-control" name ="description" placeholder="Description"
+        value="<%= image.description %>" required >
+      </div>
+      <div class="mack">
+        <input type="file" class="form-control" name ="image" placeholder="Choose a file">
+        <img src="/<%= image.image %>" width="100">
+      </div>
+      <input type="hidden" name ="old_image" value ="<%= image.image %>">
+
+      <button type="submit" name ="submit">Update image</button>
+    </form>
+    </div>
+
+
+
+<%- include('layout/footer') %>
+
